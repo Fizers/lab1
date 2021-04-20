@@ -24,10 +24,15 @@ public:
     virtual type getCompanyType() = 0;
     virtual double getCompanyTax() = 0;
     QString getCompanyName();
+    void setCompanyName(const QString &value);
     QList<QString> getCompanyOwners();
+    void setCompanyOwners(const QList<QString> &value);
     double getCompanyIncome();
+    void setCompanyIncome(double value);
     double getCompanyArea();
+    void setCompanytArea(double value);
     int getEmpNumber();
+    void setEmpNumber(int value);
 };
 
 class GovernmentCompany : public Company

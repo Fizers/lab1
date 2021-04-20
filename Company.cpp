@@ -16,9 +16,19 @@ QString Company::getCompanyName()
     return ComName;
 }
 
+void Company::setCompanyName(const QString &value)
+{
+    ComName = value;
+}
+
 QList<QString> Company::getCompanyOwners()
 {
     return ComOwners;
+}
+
+void Company::setCompanyOwners(const QList<QString> &value)
+{
+    ComOwners = value;
 }
 
 double Company::getCompanyIncome()
@@ -26,14 +36,29 @@ double Company::getCompanyIncome()
     return ComIncome;
 }
 
+void Company::setCompanyIncome(double value)
+{
+    ComIncome = value;
+}
+
 double Company::getCompanyArea()
 {
     return ComArea;
 }
 
+void Company::setCompanytArea(double value)
+{
+   ComArea = value;
+}
+
 int Company::getEmpNumber()
 {
     return EmpNumber;
+}
+
+void Company::setEmpNumber(int value)
+{
+    EmpNumber = value;
 }
 
 GovernmentCompany::GovernmentCompany(QString &name, QList<QString> &holders, double income, double area, int NumEmp):
