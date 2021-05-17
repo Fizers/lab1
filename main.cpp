@@ -32,11 +32,20 @@ void CompanyStat(Company::type ComT)
             cout << "Name: " << ptr -> getCompanyName() << Qt::endl;
 
             cout << "Owners: ";
-                for (int j = 0; j < ptr -> getCompanyOwners().size(); j++)
+
+                bool IsFirst = true;
+
+                for (QString owner: ptr -> getCompanyOwners())
                 {
-                    cout << ptr -> getCompanyOwners().operator[](j);
-                if (j != ptr -> getCompanyOwners().size() - 1)
-                    cout << ", ";
+                    if (!IsFirst)
+                        {
+                            cout << ", ";
+                        }
+                    else
+                        {
+                            IsFirst = false;
+                        }
+                     cout << owner;
                 }
                 cout << Qt::endl;
         }
@@ -143,7 +152,7 @@ int main(int argc, char *argv[])
 
       cout << Qt::endl;
 
-      CompData();
+      CompData(); 
 
       return a.exec();
 }
